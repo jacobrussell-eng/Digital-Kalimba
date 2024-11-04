@@ -6,18 +6,20 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h1>Play this Kalimba!</h1>
-        <h2>Click the tabs or Press keys 1-8 to Play</h2>
+        <div id="textRegion">
+            <h1>Play this Kalimba!</h1>
+            <h2>Click the tabs or Press keys 1-8 or S-L to Play</h2>
+        </div>
         <div id="playArea">
             <div id="instrument">
-                <div class="tab" onclick="playNote()" data-value="1"></div>
-                <div class="tab" onclick="playNote()" data-value="2"></div>
-                <div class="tab" onclick="playNote()" data-value="3"></div>
-                <div class="tab" onclick="playNote()" data-value="4"></div>
-                <div class="tab" onclick="playNote()" data-value="5"></div>
-                <div class="tab" onclick="playNote()" data-value="6"></div>
-                <div class="tab" onclick="playNote()" data-value="7"></div>
-                <div class="tab" onclick="playNote()" data-value="8"></div>
+                <div class="tab t1" onclick="playNote()" data-value="1"><span class="note">Ċ</span></div>
+                <div class="tab t2" onclick="playNote()" data-value="2"><span class="note">A</span></div>
+                <div class="tab t3" onclick="playNote()" data-value="3"><span class="note">F</span></div>
+                <div class="tab t4" onclick="playNote()" data-value="4"><span class="note">D</span></div>
+                <div class="tab t5" onclick="playNote()" data-value="5"><span class="note">C</span></div>
+                <div class="tab t6" onclick="playNote()" data-value="6"><span class="note">E</span></div>
+                <div class="tab t7" onclick="playNote()" data-value="7"><span class="note">G</span></div>
+                <div class="tab t8" onclick="playNote()" data-value="8"><span class="note">B</span></div>
             </div>
         </div>
         <script src="kalimba.js"></script>
