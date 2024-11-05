@@ -29,7 +29,15 @@ const tabs = document.querySelectorAll(".tab");
 window.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundImage = "url(" + gifs[Math.floor(Math.random()*7+1)];
     tabs.forEach(tab => {
-        tab.addEventListener('click', (event) => playNote(event.target.dataset.value));
+        tab.addEventListener('mousedown', (event) => {
+            playNote(event.target.dataset.value);
+            // Add button-clicked style set:
+            event.target.classList.add("pressed");
+            setTimeout(()=>{event.target.classList.remove("pressed")},50);
+        });
+        // tab.addEventListener('mouseup', (event) => {
+        //     // Undo button-click styles:
+        // });
     })
 })
 
@@ -41,35 +49,51 @@ window.addEventListener("keydown", (event) => {
     switch (event.key.toLowerCase()) {
         case "s":
         case "1":
-            playNote(1);
+            playNote(8);
+            document.querySelector(".t1").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t1").classList.remove("pressed")},50);
             break;
         case "d":
         case "2":
-            playNote(2);
+            playNote(6);
+            document.querySelector(".t2").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t2").classList.remove("pressed")},50);
             break;
         case "f":
         case "3":
-            playNote(3);
+            playNote(4);
+            document.querySelector(".t3").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t3").classList.remove("pressed")},50);
             break;
         case "g":
         case "4":
-            playNote(4);
+            playNote(2);
+            document.querySelector(".t4").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t4").classList.remove("pressed")},50);
             break;
         case "h":
         case "5":
-            playNote(5);
+            playNote(1);
+            document.querySelector(".t5").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t5").classList.remove("pressed")},50);
             break;
         case "j":
         case "6":
-            playNote(6);
+            playNote(3);
+            document.querySelector(".t6").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t6").classList.remove("pressed")},50);
             break;
         case "k":
         case "7":
-            playNote(7);
+            playNote(5);
+            document.querySelector(".t7").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t7").classList.remove("pressed")},50);
             break;
         case "l":
         case "8":
-            playNote(8);
+            playNote(7);
+            document.querySelector(".t8").classList.add("pressed");
+            setTimeout(()=>{document.querySelector(".t8").classList.remove("pressed")},50);
             break;
     }
 })
